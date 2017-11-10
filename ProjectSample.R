@@ -3,7 +3,7 @@
 #'This function implements single variable rejection samping for rvs
 #'  with bounded support and which have have bounded pdf. we expect N/maxf sample
 #'
-#'The second paragraph will show up somewhere else and should be additional detailed
+#' Here are more details about the algorithm that we are using
 #'
 #'@param f the pdf that we are sampling from
 #'@param N the number of attempted samples
@@ -24,6 +24,6 @@
 oneDSAMPLE <- function(f, N, lb, ub, maxf){
   ones <- runif(N, lb, ub)
   unis <- runif(N,0,maxf)
-  ones[unit = f(ones)]
+  ones[unis < f(ones)]
 }
 

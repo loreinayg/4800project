@@ -17,3 +17,9 @@ hello <- function() {
   print("Hello, world!")
 }
 
+myfun <- function(x,y){
+  a = x+y
+  b = 2*x
+  a+b
+}
+
